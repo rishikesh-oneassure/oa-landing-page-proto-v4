@@ -13,7 +13,7 @@ import { LiaHandshake, LiaUserCheckSolid } from "react-icons/lia";
 
 export default function Hero() {
   return (
-    <div className="relative left-1/2 h-fit w-screen -translate-x-1/2 -mt-24 pt-36 md:-mt-31.5 md:pt-43.5 lg:-mt-31 lg:pt-43 px-6 md:px-0">
+    <div className="relative h-fit w-full -mt-24 pt-36 md:left-1/2 md:w-screen md:-translate-x-1/2 md:-mt-31.5 md:pt-43.5 lg:-mt-31 lg:pt-43">
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -24,7 +24,7 @@ export default function Hero() {
           }}
         />
       </div>
-      <div className="relative z-1 flex flex-col items-center gap-8">
+      <div className="relative z-1 flex w-full min-w-0 flex-col items-center gap-8 px-6 md:px-0">
         <div className="flex flex-col items-center gap-2">
           <Heading2XLarge
             as="h1"
@@ -42,9 +42,9 @@ export default function Hero() {
           </HeadingSmall>
         </div>
 
-        <SectionContainerMedium className="flex flex-col-reverse md:flex-row px-0! mb-0!">
-          <div className="mx-auto flex flex-col-reverse md:flex-row">
-            <div className="md:max-w-1/2 flex flex-col items-center justify-center px-6 md:pr-12 py-3 bg-primary-800 rounded-b-2xl md:rounded-br-none md:rounded-l-2xl md:translate-x-4 text-white divide-y divide-primary-700 *:w-full">
+        <SectionContainerMedium className="flex w-full min-w-0 flex-col-reverse px-0! mb-0! md:flex-row">
+          <div className="mx-auto flex w-full min-w-0 max-w-full flex-col-reverse md:flex-row">
+            <div className="flex w-full min-w-0 flex-col items-center justify-center bg-primary-800 px-6 py-3 text-white divide-y divide-primary-700 rounded-b-2xl *:w-full md:max-w-1/2 md:translate-x-4 md:rounded-l-2xl md:rounded-br-none md:pr-12">
               <HeadingSmall className={"border-b-0"} weight="semibold">
                 You can avail
               </HeadingSmall>
@@ -52,7 +52,7 @@ export default function Hero() {
                 <span className="flex items-center justify-center h-8 aspect-square rounded-full mt-1">
                   <HiOutlineDocumentCheck className="h-6 w-6 aspect-square text-primary-300" />
                 </span>
-                <div className="flex flex-col gap-1.5">
+                <div className="flex min-w-0 flex-col gap-1.5">
                   <BodySmall
                     className="uppercase tracking-widest"
                     weight="semibold"
@@ -71,7 +71,7 @@ export default function Hero() {
                 <span className="flex items-center justify-center h-8 aspect-square rounded-full mt-1">
                   <LiaUserCheckSolid className="h-6 w-6 aspect-square text-primary-300" />
                 </span>
-                <div className="flex flex-col gap-1.5">
+                <div className="flex min-w-0 flex-col gap-1.5">
                   <BodySmall
                     className="uppercase tracking-widest"
                     weight="semibold"
@@ -89,7 +89,7 @@ export default function Hero() {
                 <span className="flex items-center justify-center h-8 aspect-square rounded-full mt-1">
                   <LiaHandshake className="h-6 w-6 aspect-square text-primary-300" />
                 </span>
-                <div className="flex flex-col gap-1.5">
+                <div className="flex min-w-0 flex-col gap-1.5">
                   <BodySmall
                     className="uppercase tracking-widest"
                     weight="semibold"
@@ -105,7 +105,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <form className="md:max-w-1/2 w-full flex flex-col px-6 py-2 rounded-t-2xl md:rounded-2xl bg-white z-5 shadow-lg">
+            <form className="z-5 flex w-full min-w-0 max-w-full flex-col rounded-t-2xl bg-white px-6 py-2 shadow-lg md:max-w-1/2 md:rounded-2xl">
               <div className="flex flex-col gap-0.5 py-2">
                 <HeadingSmall className="text-neutral-1100">
                   Book your free call
@@ -121,7 +121,7 @@ export default function Hero() {
                 </label>
                 <input
                   type="text"
-                  className="p-2 bg-white rounded-lg border border-neutral-300"
+                  className="w-full min-w-0 max-w-full rounded-lg border border-neutral-300 bg-white p-2"
                   placeholder=""
                 />
               </p>
@@ -134,7 +134,7 @@ export default function Hero() {
                 </label>
                 <input
                   type="text"
-                  className="p-2 bg-white rounded-lg border border-neutral-300"
+                  className="w-full min-w-0 max-w-full rounded-lg border border-neutral-300 bg-white p-2"
                   placeholder=""
                 />
               </p>
@@ -145,7 +145,7 @@ export default function Hero() {
                     What do you need?
                   </BodyLarge>
                 </label>
-                <select className="p-2 border border-neutral-300 rounded-lg text-base text-neutral-1100">
+                <select className="w-full min-w-0 max-w-full rounded-lg border border-neutral-300 p-2 text-base text-neutral-1100">
                   <option value={"Policy Review"}>Policy Review</option>
                   <option value={"Personalized Recommendation"}>
                     Personalized Recommendation

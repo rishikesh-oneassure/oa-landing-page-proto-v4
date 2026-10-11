@@ -5,7 +5,7 @@ import FooterAbout from "@/components/Footer/components/FooterBottom";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-100 w-full px-10 py-12 mb-20 md:mb-0  md:px-20  md:py-16">
+    <footer className="w-full bg-primary-100 px-10 py-12 md:px-20 md:py-16">
       <FooterTopSection />
       <CalculatorSection />
       <FooterTabs />

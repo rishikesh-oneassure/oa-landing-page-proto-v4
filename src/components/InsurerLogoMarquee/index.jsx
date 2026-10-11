@@ -26,7 +26,7 @@ export default function InsurerLogoMarquee({ className = "" }) {
   return (
     <section
       className={cn(
-        "relative left-1/2 w-dvw -translate-x-1/2 overflow-hidden bg-white py-2.5 md:py-8",
+        "relative w-full overflow-hidden bg-white py-2.5 md:py-8",
         className,
       )}
     >
