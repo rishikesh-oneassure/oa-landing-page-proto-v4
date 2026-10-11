@@ -1,0 +1,560 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "General Sans";
+  src: url("./fonts/GeneralSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("./fonts/GeneralSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("./fonts/GeneralSans-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("./fonts/GeneralSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-instrumentSans: "Instrument Sans", sans-serif;
+  --background: 0 0% 100%;
+  --foreground: 0 0% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 3.9%;
+  --primary: 0 0% 9%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 0 0% 96.1%;
+  --secondary-foreground: 0 0% 9%;
+  --muted: 0 0% 96.1%;
+  --muted-foreground: 0 0% 45.1%;
+  --accent: 0 0% 96.1%;
+  --accent-foreground: 0 0% 9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 89.8%;
+  --input: 0 0% 89.8%;
+  --ring: 0 0% 3.9%;
+  --chart-1: 12 76% 61%;
+  --chart-2: 173 58% 39%;
+  --chart-3: 197 37% 24%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 27 87% 67%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 0 0% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 0 0% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 0 0% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 0 0% 98%;
+  --primary-foreground: 0 0% 9%;
+  --secondary: 0 0% 14.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 0 0% 14.9%;
+  --muted-foreground: 0 0% 63.9%;
+  --accent: 0 0% 14.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 14.9%;
+  --input: 0 0% 14.9%;
+  --ring: 0 0% 83.1%;
+  --chart-1: 220 70% 50%;
+  --chart-2: 160 60% 45%;
+  --chart-3: 30 80% 55%;
+  --chart-4: 280 65% 60%;
+  --chart-5: 340 75% 55%;
+}
+
+@theme {
+  --font-generalSans: "General Sans", sans-serif;
+  --font-helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-manrope: "Manrope", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-corinthia: "Corinthia", cursive;
+
+  --tracking-tightest: 0.015em;
+  --text-custom-32: 32px;
+  --text-custom-32--line-height: 36px;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-base: 0.5rem;
+  --radius-4xl: 1.25rem;
+  --radius-5xl: 2.5rem;
+  --radius-10xl: 5rem;
+  --radius-12xl: 6.25rem;
+
+  --aspect-0658: 0.658;
+
+  --background-image-dot-pattern: radial-gradient(currentColor 1px, transparent 1px);
+
+  --shadow-300: 0px 2px 4px -1px rgba(0, 0, 0, 0.06), 0px 4px 15px 2px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0px 1.5px 1.5px 0px rgba(0, 0, 0, 0.25);
+  --shadow-dark: 0px 2.5px 2.5px 0px rgba(0, 0, 0, 0.25);
+  --shadow-shadow100: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 15px 2px rgba(0, 0, 0, 0.1);
+  --shadow-recommendationAddMemberBtn: 0 1px 10px 0 rgba(0, 0, 0, 0.05),
+    0 1px 20px 0 rgba(0, 0, 0, 0.04);
+  --shadow-productCard: 0 2px 10px 0 #0000000d, 0 2px 20px 0 #0000000d;
+  --shadow-workDashboardCard: 0 2px 4px -1px #0000000d, 0 4px 15px 2px #0000000d;
+  --shadow-workSection: 0 1px 10px 0 rgba(0, 0, 0, 0.05), 0 1px 20px 0 #0000000d;
+  --shadow-whyOneassure: #55b5aa26;
+  --shadow-customblue4d: 0px 4px 4px 0px #3b71ca4d;
+  --shadow-customgreen4d: 0px 4px 4px 0px #0000001a;
+  --shadow-BookACall: 0px 2px 4px 0px #6b6b6b;
+
+  --color-blue100: #e5e5ff;
+  --color-blue200: #ccccff;
+  --color-blue300: #9999ff;
+  --color-blue400: #6666ff;
+  --color-blue500: #3333ff;
+  --color-blue600: #0000ff;
+  --color-blue700: #5da3d0;
+  --color-blue800: #469dd7;
+  --color-blue900: #469dd7;
+  --color-blue1000: #2373a8;
+  --color-blue1100: #136093;
+  --color-blue1200: #117cc299;
+  --color-blue1300: #117cc2cc;
+  --color-gray100: #c6c6c6;
+  --color-gray200: #ebecf2;
+  --color-gray300: #d2d4d9;
+  --color-gray400: #a9b4bf;
+  --color-gray500: #939ca6;
+  --color-gray600: #7c848c;
+  --color-gray700: #666d73;
+  --color-gray800: #505559;
+  --color-gray900: #222426;
+  --color-gray1000: #eff1f9;
+  --color-gray1100: #cfd3d4;
+  --color-gray1200: #5e6366;
+  --color-gray1300: #eff1f999;
+  --color-gray1400: #999999;
+  --color-orange100: #f1d4ae;
+  --color-orange200: #f1c88e;
+  --color-orange300: #f1ba6f;
+  --color-orange400: #f1ad50;
+  --color-orange500: #f1a030;
+  --color-orange600: #f19311;
+  --color-green100: #cafce0;
+  --color-green200: #a5f0c5;
+  --color-green300: #10947e;
+  --color-green400: #00917c;
+  --color-green500: #035956;
+  --color-green600: #184d47;
+  --color-green700: #55b5aa;
+  --color-green800: #4ca2b0;
+  --color-green900: #89edff;
+  --color-green1000: #1a9f8f99;
+  --color-green1100: #88c8d3;
+  --color-green1200: #1a9f8fcc;
+  --color-green1300: #78c478;
+  --color-red100: #fbebeb;
+  --color-red200: #f6d7d7;
+  --color-red300: #edafaf;
+  --color-red400: #e48686;
+  --color-red500: #db5e5e;
+  --color-red600: #d23636;
+  --color-slateGrey: #666c73;
+  --color-grayBg: #fafafa;
+  --color-darkBlueBg: #00001c;
+  --color-bgYellow: #fffcf1;
+  --color-bgOrange: #fff9f1;
+  --color-bgPurple: #f3f1ff;
+  --color-bgGreen: #f1fff8;
+  --color-bgRed: #fff1f1;
+  --color-lightPurple: #4a4affcc;
+  --color-purple100: #5676ff;
+  --color-black200: #1a9f8f;
+  --color-leftGreen: #1a9f8f;
+  --color-rightBlue: #117cc2;
+  --color-circleWhite: #fefefe;
+  --color-backgroundWhite: #ffffff;
+  --color-darkGreen: #50abbb;
+  --color-black100: #2e2e2e;
+  --color-black300: #000000;
+  --color-black400: #000000;
+  --color-cardBackground: #ffffff4d;
+
+  --color-ntrl-black: #222226;
+  --color-ntrl-grey1: #677b92;
+  --color-ntrl-grey2: #dbddef;
+  --color-ntrl-outline: #edeef7;
+  --color-ntrl-white: #ffffff;
+
+  --color-primary-1: #0000a3;
+  --color-primary-2: #0000ff;
+  --color-primary-3: #ebf2ff;
+  --color-secondary-1: #199f8f;
+  --color-secondary-2: #edfcfb;
+
+  --color-green-100: #00a991;
+  --color-green-main-200: #64c8bc;
+  --color-green-50: #e6f6f4;
+  --color-neutral-dark-1100: #243547;
+  --color-neutral-dark-900: #40566d;
+  --color-neutral-dark-800: #58728d;
+  --color-neutral-light-700: #6c849d;
+  --color-blue-700: #056ab6;
+  --color-blue-main-800: #045591;
+  --color-blue-100: #e6f4fe;
+  --color-blue-300: #b2dcfb;
+  --color-gray-100: #f1f5fa;
+
+  --color-red-1: #d23636;
+  --color-red-2: #e48686;
+  --color-red-3: #f6d7d7;
+  --color-orange-1: #e78d0d;
+  --color-orange-2: #f1ad50;
+  --color-orange-3: #f1d4ad;
+  --color-blue-1: #00548b;
+  --color-blue-2: #3f8cbf;
+  --color-blue-3: #bfe6ff;
+  --color-blue-4: #eef6fc;
+  --color-blue-5: #2769f6;
+  --color-green-1: #71a725;
+  --color-green-2: #a7d662;
+  --color-green-3: #e9fccf;
+  --color-green-4: #184d47;
+  --color-green-5: #1ba500;
+
+  --color-soft-blue: #f1f6ff;
+  --color-soft-grey: #f2f2f2;
+  --color-sky-grey: #e7efff;
+
+  --color-primary-green-1: #edfcfb;
+  --color-primary-green-2: #48b2a5;
+  --color-primary-blue-1: #ebf2ff;
+  --color-primary-blue-2: #c6e0f0;
+  --color-primary-blue-3: #2989c8;
+  --color-secondary-blue-1: #53a3d0;
+  --color-secondary-blue-2: #50a9bf;
+  --color-secondary-green-1: #50abbb;
+  --color-secondary-green-2: #55b5aa;
+  --color-secondary-green-3: #51a7b6;
+
+  --color-gradient-1-green: #53b6ac;
+  --color-gradient-1-blue: #4d9cce;
+  --color-gradient-2-blue-dark: #2475a9;
+  --color-gradient-2-blue-light: #449bd4;
+  --color-gradient-3-green-dark: #4da2b1;
+  --color-gradient-3-green-light: #6ac6d7;
+  --color-gradient-4-blue-dark: #5c9eca;
+  --color-gradient-4-blue-light: #6bb0de;
+
+  --color-ntrl-black-1: #18181b;
+  --color-ntrl-black-2: #2a2a2a;
+  --color-ntrl-grey-1: #f6f7fb;
+  --color-ntrl-grey-2: #f5f5f5;
+  --color-ntrl-grey-3: #eff1f9;
+  --color-ntrl-grey-4: #cfd3d4;
+  --color-ntrl-grey-5: #999999;
+  --color-logo-1: #2e56ff;
+  --color-logo-2: #1ebeab;
+
+  --color-primary-50: #f8fbff;
+  --color-primary-100: #e6f4fe;
+  --color-primary-200: #daeefd;
+  --color-primary-300: #b2dcfb;
+  --color-primary-400: #078df2;
+  --color-primary-500: #067fda;
+  --color-primary-600: #0671c2;
+  --color-primary-700: #056ab6;
+  --color-primary-800: #045591;
+  --color-primary-900: #033f6d;
+  --color-primary-1000: #023155;
+
+  --color-secondary-100: #e6f6f4;
+  --color-secondary-200: #d9f2ef;
+  --color-secondary-300: #b0e4dd;
+  --color-secondary-400: #00a991;
+  --color-secondary-500: #009883;
+  --color-secondary-600: #008774;
+  --color-secondary-700: #007f6d;
+  --color-secondary-800: #006557;
+  --color-secondary-900: #004c41;
+  --color-secondary-1000: #003b33;
+
+  --color-tertiary-red-400: #e7000b;
+  --color-tertiary-orange-400: #f26c07;
+
+  --color-neutral-1300: #0c1927;
+  --color-neutral-1200: #192839;
+  --color-neutral-1100: #243547;
+  --color-neutral-1000: #2f4256;
+  --color-neutral-900: #40566d;
+  --color-neutral-800: #58728d;
+  --color-neutral-700: #6c849d;
+  --color-neutral-600: #768ea7;
+  --color-neutral-500: #90a5bb;
+  --color-neutral-400: #b1c1d2;
+  --color-neutral-300: #cbd5e2;
+  --color-neutral-200: #e3eaf3;
+  --color-neutral-100: #f1f5fa;
+  --color-neutral-050: #f8fafc;
+  --color-neutral-000: #fcfcfd;
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+
+  --animate-slide-in-up: slide-in-up 0.5s ease-out;
+  --animate-bounce-gentle: bounce-gentle 1.5s infinite;
+  --animate-pulse: pulse 2s infinite;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-float-slow: float-slow 5s ease-in-out infinite;
+  --animate-marquee: marquee 25s linear infinite;
+
+  @keyframes slide-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes bounce-gentle {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes float-slow {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+@utility min-w-tabWidth {
+  min-width: 192px;
+}
+
+@utility min-w-inputWidth {
+  min-width: 420px;
+}
+
+@utility min-h-tabHeight {
+  min-height: 74px;
+}
+
+@utility bg-dot-size {
+  background-size: 16px 16px;
+}
+
+@utility aspect-0\.658 {
+  aspect-ratio: 0.658;
+}
+
+@keyframes thinking-dots {
+  0%,
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes sparkle-rotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(90deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+  }
+  75% {
+    transform: rotate(270deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes sparkle-glow {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+    filter: blur(0px);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.2);
+    filter: blur(2px);
+  }
+}
+
+@layer utilities {
+  .animate-thinking-dot-1 {
+    animation: thinking-dots 1.4s infinite;
+    animation-delay: 0s;
+  }
+  .animate-thinking-dot-2 {
+    animation: thinking-dots 1.4s infinite;
+    animation-delay: 0.2s;
+  }
+  .animate-thinking-dot-3 {
+    animation: thinking-dots 1.4s infinite;
+    animation-delay: 0.4s;
+  }
+  .animate-sparkle-rotate {
+    animation: sparkle-rotate 2s ease-in-out infinite;
+  }
+  .animate-sparkle-glow {
+    animation: sparkle-glow 1.5s ease-in-out infinite;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url(https://d1wamg5uas0pit.cloudfront.net/application-form/note.svg)
+      no-repeat;
+    background-size: contain;
+    border-width: thin;
+  }
+
+  .oneassure-hide-date-icon::-webkit-calendar-picker-indicator {
+    opacity: 0 !important;
+    background: none !important;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+  }
+  .scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #d0d0d0;
+    border-radius: 100vh;
+    border: 3px solid #f6f7ed;
+  }
+  .remove-arrow::-webkit-inner-spin-button,
+  .remove-arrow::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .remove-arrow {
+    -moz-appearance: textfield;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
