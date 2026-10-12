@@ -3,7 +3,7 @@ import { BodyLarge, BodySmall, HeadingXLarge } from "../UI/Typography";
 
 export default function BeReady() {
   return (
-    <SectionContainerLarge className="flex flex-col items-center gap-2 bg-primary-800 p-6 md:p-8 md:px-24 md:rounded-3xl text-white text-center mb-0! md:mb-12!">
+    <SectionContainerLarge className="flex flex-col items-center gap-2 bg-primary-800 p-6 md:p-8 md:px-24 md:rounded-3xl text-white text-center mb-0! md:mb-20!">
       <BodySmall className={"uppercase text-center tracking-widest"}>
         &mdash; Be Ready Before You Need it
       </BodySmall>
