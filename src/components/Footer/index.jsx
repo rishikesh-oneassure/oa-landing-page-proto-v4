@@ -7,8 +7,8 @@ const Footer = () => {
   return (
     <footer className="w-full bg-primary-100 px-10 py-12 md:px-20 md:py-16">
       <FooterTopSection />
-      <CalculatorSection />
-      <FooterTabs />
+      {/* <CalculatorSection /> */}
+      {/* <FooterTabs /> */}
       <FooterAbout />
     </footer>
   );

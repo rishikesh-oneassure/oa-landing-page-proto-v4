@@ -6,6 +6,7 @@ import {
   BodyMedium,
   BodySmall,
   Heading2XLarge,
+  HeadingMedium,
   HeadingSmall,
 } from "@/components/UI/Typography";
 import { HiOutlineDocumentCheck } from "react-icons/hi2";
@@ -44,64 +45,73 @@ export default function Hero() {
 
         <SectionContainerMedium className="flex w-full min-w-0 flex-col-reverse px-0! mb-0! md:flex-row">
           <div className="mx-auto flex w-full min-w-0 max-w-full flex-col-reverse md:flex-row gap-3 md:gap-8">
-            <div className="flex w-full min-w-0 flex-col items-center justify-center bg-primary-800 px-6 py-3 text-white divide-y divide-primary-700 rounded-2xl *:w-full md:max-w-1/2">
+            <div className="flex w-full md:h-full min-w-0 flex-col items-center justify-center bg-primary-800 p-6 md:p-8 text-white divide-y divide-primary-700 rounded-2xl *:w-full md:max-w-1/2">
               <BodySmall
-                className={"border-b-0 uppercase tracking-widest"}
+                className={"border-b-0 uppercase tracking-widest pb-3 md:pb-6"}
                 weight="semibold"
               >
                 &mdash; You can avail
               </BodySmall>
-              <div className="flex items-start gap-1 py-3">
-                <span className="flex items-center justify-center h-8 -mt-1 aspect-square rounded-full">
-                  <HiOutlineDocumentCheck className="h-6 w-6 aspect-square text-primary-300" />
-                </span>
-                <div className="flex min-w-0 flex-col gap-1.5">
-                  <BodyMedium weight="semibold">Free Policy Review</BodyMedium>
-                  <BodyMedium classname="text-white">
-                    Already have a policy? We walk you through what it really
-                    covers, flag the gaps and exclusions, and tell you honestly
-                    whether to stay with it or move.
-                  </BodyMedium>
-                </div>
-              </div>
 
-              <div className="flex items-start gap-1 py-3">
-                <span className="flex items-center justify-center h-8 -mt-1 aspect-square rounded-full">
-                  <LiaUserCheckSolid className="h-6 w-6 aspect-square text-primary-300" />
-                </span>
-                <div className="flex min-w-0 flex-col gap-1.5">
-                  <BodyMedium weight="semibold">
-                    Personalised Recommendation
-                  </BodyMedium>
-                  <BodyMedium classname="text-white">
-                    Plans matched to your family, health and budget, with a
-                    clear reason behind every pick.
-                  </BodyMedium>
-                </div>
-              </div>
+              <span className="block w-full h-px bg-primary-700"></span>
 
-              <div className="flex items-start gap-1 py-3">
-                <span className="flex items-center justify-center h-8 -mt-1 aspect-square rounded-full">
-                  <LiaHandshake className="h-6 w-6 aspect-square text-primary-300" />
-                </span>
-                <div className="flex min-w-0 flex-col gap-1.5">
-                  <BodyMedium weight="semibold">
-                    Lifetime Dedicated Claims Support
-                  </BodyMedium>
-                  <BodyMedium classname="text-white">
-                    Our dedicated claims team stays with you for as long as you
-                    hold the policy, from filing to insurer follow-ups and
-                    escalations.
-                  </BodyMedium>
+              <div className="h-full flex flex-col justify-between">
+                <div className="flex items-start gap-1 py-3">
+                  <span className="flex items-center justify-center h-8 -mt-1 aspect-square rounded-full">
+                    <HiOutlineDocumentCheck className="h-6 w-6 aspect-square text-primary-300" />
+                  </span>
+                  <div className="flex min-w-0 flex-col gap-1.5">
+                    <BodyLarge weight="semibold">Free Policy Review</BodyLarge>
+                    <BodyMedium classname="text-white">
+                      Already have a policy? We walk you through what it really
+                      covers, flag the gaps and exclusions, and tell you
+                      honestly whether to stay with it or move.
+                    </BodyMedium>
+                  </div>
+                </div>
+
+                <span className="block w-full h-px bg-primary-700"></span>
+
+                <div className="flex items-start gap-1 py-3">
+                  <span className="flex items-center justify-center h-8 -mt-1 aspect-square rounded-full">
+                    <LiaUserCheckSolid className="h-6 w-6 aspect-square text-primary-300" />
+                  </span>
+                  <div className="flex min-w-0 flex-col gap-1.5">
+                    <BodyLarge weight="semibold">
+                      Personalised Recommendation
+                    </BodyLarge>
+                    <BodyMedium classname="text-white">
+                      Plans matched to your family, health and budget, with a
+                      clear reason behind every pick.
+                    </BodyMedium>
+                  </div>
+                </div>
+
+                <span className="block w-full h-px bg-primary-700"></span>
+
+                <div className="flex items-start gap-1 pt-3">
+                  <span className="flex items-center justify-center h-8 -mt-1 aspect-square rounded-full">
+                    <LiaHandshake className="h-6 w-6 aspect-square text-primary-300" />
+                  </span>
+                  <div className="flex min-w-0 flex-col gap-1.5">
+                    <BodyLarge weight="semibold">
+                      Lifetime Dedicated Claims Support
+                    </BodyLarge>
+                    <BodyMedium classname="text-white">
+                      Our dedicated claims team stays with you for as long as
+                      you hold the policy, from filing to insurer follow-ups and
+                      escalations.
+                    </BodyMedium>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <form className="z-5 flex w-full min-w-0 max-w-full flex-col bg-white px-6 py-2 shadow-lg md:max-w-1/2 rounded-2xl">
-              <div className="flex flex-col gap-0.5 py-2">
-                <HeadingSmall className="text-neutral-1100">
+            <form className="z-5 flex w-full min-w-0 max-w-full flex-col bg-white px-8 py-4 shadow-lg md:max-w-1/2 rounded-2xl">
+              <div className="flex flex-col gap-0.5 pt-2">
+                <HeadingMedium className="text-neutral-1100">
                   Book your free call
-                </HeadingSmall>
+                </HeadingMedium>
                 <BodyMedium className="text-neutral-700">
                   Step 1 of 2
                 </BodyMedium>
@@ -109,7 +119,7 @@ export default function Hero() {
 
               <p className="flex flex-col gap-0.5 w-full py-2">
                 <label>
-                  <BodyLarge className="text-neutral-1100">Name</BodyLarge>
+                  <BodyLarge className="text-neutral-900 ml-1">Name</BodyLarge>
                 </label>
                 <input
                   type="text"
@@ -120,7 +130,7 @@ export default function Hero() {
 
               <p className="flex flex-col gap-0.5 w-full py-2">
                 <label>
-                  <BodyLarge className="text-neutral-1100">
+                  <BodyLarge className="text-neutral-900 ml-1">
                     Phone Number
                   </BodyLarge>
                 </label>
@@ -133,11 +143,11 @@ export default function Hero() {
 
               <p className="flex flex-col gap-0.5 w-full py-2">
                 <label value={"default"}>
-                  <BodyLarge className="text-neutral-1100">
+                  <BodyLarge className="text-neutral-900 ml-1">
                     What do you need?
                   </BodyLarge>
                 </label>
-                <select className="w-full min-w-0 max-w-full rounded-lg border border-neutral-300 p-2 text-base text-neutral-1100">
+                <select className="w-full min-w-0 max-w-full rounded-lg border-r-8 border-r-white outline outline-neutral-300 p-2 text-sm text-neutral-900">
                   <option value={"Policy Review"}>Policy Review</option>
                   <option value={"Personalized Recommendation"}>
                     Personalized Recommendation
@@ -151,40 +161,46 @@ export default function Hero() {
 
               <BodySmall
                 className={
-                  "block w-full pb-2 border-b border-neutral-200 text-neutral-600 text-center"
+                  "block w-full pb-2 border-b border-neutral-200 text-neutral-600 text-center tracking-widest"
                 }
               >
                 A OneAssure Expert Will Assist You
               </BodySmall>
 
-              <div className="w-full pt-4 pb-2 flex items-center justify-between">
-                <BodySmall className={"text-neutral-600 text-center leading-3"}>
-                  We Work With
-                </BodySmall>
+              <div className="w-full pt-4 pb-2 md:pb-0 flex items-center justify-between">
+                <BodyMedium
+                  className={
+                    "text-neutral-600 text-center leading-3 tracking-wider"
+                  }
+                >
+                  Insurers We Work With
+                </BodyMedium>
 
-                <span className="h-8 md:h-10 w-auto">
-                  <img
-                    src="/insurer-logos/21-logo-care-health-insurance-2c0265102e.svg"
-                    alt="HDFC ERGO Logo"
-                    className="object-contain h-10"
-                  />
-                </span>
+                <div className="flex items-center gap-2 md:gap-4">
+                  <span className="h-8 md:h-10 w-auto">
+                    <img
+                      src="/insurer-sq-logos/care-sq-logo.png"
+                      alt="HDFC ERGO Logo"
+                      className="object-cover h-10 aspect-square object-left rounded-md"
+                    />
+                  </span>
 
-                <span className="h-8 md:h-10 w-auto">
-                  <img
-                    src="/insurer-logos/08-thumbnail-niva-health-insurance-logo-a32bd384cc.png"
-                    alt="HDFC ERGO Logo"
-                    className="object-contain h-10"
-                  />
-                </span>
+                  <span className="h-8 md:h-10 w-auto">
+                    <img
+                      src="/insurer-sq-logos/niva-bupa-sq-logo.png"
+                      alt="HDFC ERGO Logo"
+                      className="object-cover h-10 aspect-square object-left rounded-md"
+                    />
+                  </span>
 
-                <span className="h-8 md:h-10 w-auto">
-                  <img
-                    src="/insurer-logos/01-logo-hdfc-22e6758170.png"
-                    alt="HDFC ERGO Logo"
-                    className="object-contain h-10"
-                  />
-                </span>
+                  <span className="h-8 md:h-10 w-auto">
+                    <img
+                      src="/insurer-sq-logos/hdfc-ergo-sq-logo.jpg"
+                      alt="HDFC ERGO Logo"
+                      className="object-cover h-10 aspect-square object-left rounded-md"
+                    />
+                  </span>
+                </div>
               </div>
             </form>
           </div>

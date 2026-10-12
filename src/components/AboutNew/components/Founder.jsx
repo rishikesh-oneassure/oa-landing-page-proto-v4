@@ -9,21 +9,9 @@ import {
   HeadingXLarge,
 } from "@/components/UI/Typography";
 
-function FounderParagraphs({ html }) {
-  const text = String(html)
-    .replace(/<[^>]+>/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-
-  if (!text) return null;
-
-  return <BodyLarge weight="regular">{text}</BodyLarge>;
-}
-
 const Founder = ({ title, desc, name, designation, company, image }) => {
-  const separatedParagraphs = desc.split("<p><br></p>");
-  const descriptionPartOne = separatedParagraphs.slice(0, 2);
-  const descriptionPartTwo = separatedParagraphs.slice(2);
+  const descriptionPartOne = desc.slice(0, 2);
+  const descriptionPartTwo = desc.slice(2);
 
   return (
     <SectionContainer className="ml-[calc(50%-50vw)]! mr-[calc(50%-50vw)]! flex w-screen! max-w-none! flex-col items-center gap-4 bg-primary-100 py-12">
@@ -40,26 +28,26 @@ const Founder = ({ title, desc, name, designation, company, image }) => {
       </div>
 
       <div className="w-full max-w-6xl flex flex-col-reverse md:flex-row overflow-clip">
-        <div className="grid bg-primary-800 rounded-2xl px-6 pt-6 z-2">
+        <div className="grid bg-primary-800 rounded-b-2xl rounded-t-none md:rounded-l-2xl md:rounded-r-none px-6 md:pt-6 z-2 justify-center">
           <img
             src="/about-founder.png"
             alt=""
-            className="w-3xl h-auto self-end drop-shadow-[1.5rem_0.5rem_1rem_rgba(0,0,0,0.5)] px-4"
+            className="h-80 md:w-5xl md:h-auto self-end drop-shadow-[1.5rem_0.5rem_1rem_rgba(0,0,0,0.5)] px-4"
           />
         </div>
 
-        <figure className="px-8 py-6 md:-translate-x-4 flex flex-col gap-3 leading-tight rounded-b-2xl md:rounded-r-2xl md:rounded-l-none bg-primary-800 text-primary-50">
-          {FounderParagraphs({ html: descriptionPartOne })}
-          {FounderParagraphs({ html: descriptionPartTwo })}
+        <figure className="px-8 py-6 md:py-10 md:-translate-x-4 flex flex-col gap-3 leading-tight rounded-t-2xl md:rounded-b-2xl md:rounded-r-2xl md:rounded-l-none bg-primary-800 text-primary-50">
+          <BodyLarge>{descriptionPartOne}</BodyLarge>
+          <BodyLarge>{descriptionPartTwo}</BodyLarge>
 
-          <div className="flex flex-col">
+          <div className="flex flex-col self-center md:self-start">
             <HeadingXLarge as="span" className={"font-corinthia mt-4"}>
               {name}
             </HeadingXLarge>
 
             <figure className="flex gap-2 -mt-1.5">
-              <BodyMedium>{designation}</BodyMedium> &mdash;{" "}
-              <BodyMedium weight="semibold">{company}</BodyMedium>
+              <BodySmall>{designation}</BodySmall> &mdash;{" "}
+              <BodySmall weight="semibold">{company}</BodySmall>
             </figure>
           </div>
         </figure>
