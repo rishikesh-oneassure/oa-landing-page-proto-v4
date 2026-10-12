@@ -32,7 +32,7 @@ export default function WhatToExpect() {
           <span className="flex items-center justify-center w-14 aspect-square rounded-full bg-primary-200">
             <CiCalendar className="w-8 h-8 text-primary-800" />
           </span>
-          <HeadingSmall className={"text-neutral-1100"} weight="semibold">
+          <HeadingSmall className={"text-neutral-900"} weight="semibold">
             Book a Slot
           </HeadingSmall>
           <BodyMedium className={"text-neutral-900"}>Takes 1 minute</BodyMedium>
@@ -42,7 +42,7 @@ export default function WhatToExpect() {
           <span className="flex items-center justify-center w-14 aspect-square rounded-full bg-primary-200">
             <CiPhone className="w-8 h-8 text-primary-800" />
           </span>
-          <HeadingSmall className={"text-neutral-1100"} weight="semibold">
+          <HeadingSmall className={"text-neutral-900"} weight="semibold">
             Talk to an Expert
           </HeadingSmall>
           <BodyMedium className={"text-neutral-900"}>
@@ -54,7 +54,7 @@ export default function WhatToExpect() {
           <span className="flex items-center justify-center w-14 aspect-square rounded-full bg-primary-200">
             <CiBoxList className="w-8 h-8 text-primary-800" />
           </span>
-          <HeadingSmall className={"text-neutral-1100"} weight="semibold">
+          <HeadingSmall className={"text-neutral-900"} weight="semibold">
             Get Shortlisted Plans
           </HeadingSmall>
           <BodyMedium className={"text-neutral-900"}>
@@ -66,7 +66,7 @@ export default function WhatToExpect() {
           <span className="flex items-center justify-center w-14 aspect-square rounded-full bg-primary-200">
             <CiCircleCheck className="w-8 h-8 text-primary-800" />
           </span>
-          <HeadingSmall className={"text-neutral-1100"} weight="semibold">
+          <HeadingSmall className={"text-neutral-900"} weight="semibold">
             Get Shortlisted Plans
           </HeadingSmall>
           <BodyMedium className={"text-neutral-900"}>

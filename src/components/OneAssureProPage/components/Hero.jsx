@@ -17,7 +17,10 @@ export default function Hero() {
   const isDesktop = useSubscribeDesktopLayout();
 
   return (
-    <div className="relative h-fit w-full -mt-24 mb-12 pt-36 md:left-1/2 md:w-screen md:-translate-x-1/2 md:-mt-31.5 md:pt-43.5 lg:-mt-31 lg:pt-43">
+    <div
+      id="hero"
+      className="relative h-fit w-full -mt-24 mb-12 pt-36 md:left-1/2 md:w-screen md:-translate-x-1/2 md:-mt-31.5 md:pt-43.5 lg:-mt-31 lg:pt-43"
+    >
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -110,7 +113,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <form className="z-5 flex w-full min-w-0 max-w-full flex-col bg-white px-8 py-4 shadow-lg md:max-w-1/2 rounded-2xl">
+            <form className="z-5 flex w-full min-w-0 max-w-full flex-col bg-white px-6 md:px-8 py-4 shadow-lg md:max-w-1/2 rounded-2xl">
               <div className="flex flex-col gap-0.5 pt-2">
                 <HeadingMedium className="text-neutral-1100">
                   Book your free call
