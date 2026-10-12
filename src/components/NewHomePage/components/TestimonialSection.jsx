@@ -2,6 +2,7 @@ import SectionContainerMedium from "@/components/globals/SectionContainerMedium"
 import SectionContainerSmall from "@/components/globals/SectionContainerSmall";
 import { BodySmall, HeadingXLarge } from "@/components/UI/Typography";
 import { useEffect, useRef, useState } from "react";
+import { BiSolidQuoteRight } from "react-icons/bi";
 
 const SLOT_HEIGHT = 78;
 
@@ -10,11 +11,11 @@ function positionStyles(position) {
 
   switch (position) {
     case 1:
-      return `${base} scale-[0.97] text-primary-800 font-medium opacity-60 text-[0.625rem]/[0.875rem] md:text-[0.875rem]/[1.25rem]`;
+      return `${base} scale-[0.97] text-primary-50 font-medium opacity-60 text-[0.625rem]/[0.875rem] md:text-[0.875rem]/[1.25rem]`;
     case 2:
-      return `${base} scale-100 bg-secondary-400 font-medium text-white opacity-100 text-[0.625rem]/[0.875rem] md:text-[1rem]/[1.5rem]`;
+      return `${base} flex items-center gap-4 scale-100 bg-secondary-400 font-medium text-white opacity-100 text-[0.625rem]/[0.875rem] md:text-[1rem]/[1.5rem]`;
     case 3:
-      return `${base} scale-[0.97] text-primary-800 font-medium opacity-60 text-[0.625rem]/[0.875rem] md:text-[0.875rem]/[1.25rem]`;
+      return `${base} scale-[0.97] text-primary-50 font-medium opacity-60 text-[0.625rem]/[0.875rem] md:text-[0.875rem]/[1.25rem]`;
     default:
       return `${base} opacity-0`;
   }
@@ -37,18 +38,18 @@ const TestimonialSection = ({ story }) => {
   }, [currentIndex]);
 
   return (
-    <div className="my-12 md:my-20">
-      <div className="mb-10 w-full overflow-hidden md:mb-16">
+    <div className="ml-[calc(50%-50vw)]! mr-[calc(50%-50vw)]! py-12 md:py-20 w-screen bg-[linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url('/family-bg-img.jpg')] bg-cover bg-top mb-0 md:mb-20">
+      <div className="mb-0 w-full overflow-hidden md:mb-0">
         <SectionContainerMedium className="flex flex-col !mb-0 !px-0">
           <div className="flex flex-col items-center text-center">
             <BodySmall
-              className={"uppercase tracking-widest text-primary-800"}
+              className={"uppercase tracking-widest text-primary-300"}
               weight="semibold"
             >
               &mdash; Testimonials
             </BodySmall>
             <HeadingXLarge
-              className="flex w-full items-center justify-center gap-6 text-center text-neutral-1100"
+              className="flex w-full items-center justify-center gap-6 text-center text-neutral-100"
               weight="medium"
             >
               {story.title}
@@ -81,6 +82,11 @@ const TestimonialSection = ({ story }) => {
                     <div
                       className={`${positionStyles(position)} w-full md:rounded-full px-4 text-center ${position === 2 ? "py-4" : ""}`}
                     >
+                      {position === 2 && (
+                        <span className="w-20 md:w-16 aspect-square rounded-full bg-white/70 flex items-center justify-center">
+                          <BiSolidQuoteRight className="w-6 h-6 text-secondary-400" />
+                        </span>
+                      )}
                       {point}
                     </div>
                   </div>

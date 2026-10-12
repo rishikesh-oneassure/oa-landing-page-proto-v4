@@ -49,18 +49,9 @@ export default function Hero() {
           </HeadingSmall>
         </div>
 
-        <SectionContainerMedium className="flex min-w-0 flex-col-reverse px-0! mb-0! md:flex-row mx-auto">
-          <div className="mx-auto flex w-fit flex-col-reverse md:flex-row md:justify-center gap-3 md:gap-8">
-            <div className="flex w-full md:h-full min-w-0 flex-col items-center justify-center bg-primary-800 p-6 md:p-8 text-white divide-y divide-primary-700 rounded-2xl *:w-full md:max-w-1/2">
-              <BodySmall
-                className={"border-b-0 uppercase tracking-widest pb-3 md:pb-6"}
-                weight="semibold"
-              >
-                &mdash; You can avail
-              </BodySmall>
-
-              <span className="block w-full h-px bg-primary-700"></span>
-
+        <SectionContainerMedium className="relative flex min-w-0 flex-col-reverse px-0! mb-0! md:flex-row mx-auto">
+          <div className="mx-auto flex w-fit flex-col-reverse md:flex-row md:justify-center gap-0 md:-translate-x-1/5">
+            <div className="flex w-full md:w-[40%] md:h-full min-w-0 flex-col items-center justify-center bg-primary-800 p-6 md:p-8 text-white divide-y divide-primary-700 rounded-b-2xl md:rounded-r-none md:rounded-l-2xl *:w-full md:max-w-1/2">
               <div className="h-full flex flex-col justify-between">
                 <div className="flex items-start gap-1 py-3">
                   <span className="flex items-center justify-center h-8 -mt-1 aspect-square rounded-full">
@@ -113,7 +104,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <form className="z-5 flex w-full md:w-[40%] min-w-0 max-w-full flex-col justify-between bg-white px-6 md:px-8 py-4 shadow-lg md:max-w-1/2 rounded-2xl">
+            <form className="z-5 flex w-full md:w-[40%] min-w-0 max-w-full flex-col justify-between gap-2 bg-white px-6 md:px-8 py-4 shadow-lg md:max-w-1/2 rounded-t-2xl md:rounded-l-none md:rounded-r-2xl">
               <div className="flex flex-col gap-0.5 pt-2">
                 <HeadingMedium className="text-neutral-1100" weight="medium">
                   Book your free call
@@ -136,6 +127,14 @@ export default function Hero() {
                   type="text"
                   className="w-full min-w-0 max-w-full rounded-lg border border-neutral-300 bg-white px-4 py-2 placeholder:text-sm md:placeholder:text-base placeholder:text-neutral-800"
                   placeholder="Phone number"
+                />
+              </p>
+
+              <p className="flex flex-col gap-0.5 w-full py-2">
+                <input
+                  type="text"
+                  className="w-full min-w-0 max-w-full rounded-lg border border-neutral-300 bg-white px-4 py-2 placeholder:text-sm md:placeholder:text-base placeholder:text-neutral-800"
+                  placeholder="Your email"
                 />
               </p>
 
@@ -163,46 +162,29 @@ export default function Hero() {
                 A OneAssure Expert Will Assist You
               </BodySmall>
 
-              <div className="w-full pt-4 pb-2 md:pb-0 flex items-center justify-between">
+              <div className="w-full pt-1 md:pt-4 md:pb-0 flex items-center justify-center">
                 <BodyMedium
                   className={
-                    "text-neutral-600 text-center leading-3.5 tracking-wider"
+                    "text-neutral-600 text-center leading-4 tracking-wide"
                   }
                 >
-                  Insurers We {!isDesktop && <br />}Work With
+                  We work with 30+ {!isDesktop && <br />}insurers trusted across
+                  India
                 </BodyMedium>
-
-                <div className="flex items-center gap-2 md:gap-4">
-                  <span className="h-8 md:h-10 w-auto">
-                    <img
-                      src="/insurer-sq-logos/care-sq-logo.png"
-                      alt="HDFC ERGO Logo"
-                      className="object-cover h-10 aspect-square object-left rounded-md"
-                    />
-                  </span>
-
-                  <span className="h-8 md:h-10 w-auto">
-                    <img
-                      src="/insurer-sq-logos/niva-bupa-sq-logo.png"
-                      alt="HDFC ERGO Logo"
-                      className="object-cover h-10 aspect-square object-left rounded-md"
-                    />
-                  </span>
-
-                  <span className="h-8 md:h-10 w-auto">
-                    <img
-                      src="/insurer-sq-logos/hdfc-ergo-sq-logo.jpg"
-                      alt="HDFC ERGO Logo"
-                      className="object-cover h-10 aspect-square object-left rounded-md"
-                    />
-                  </span>
-                </div>
               </div>
             </form>
           </div>
         </SectionContainerMedium>
       </div>
       <InsurerLogoMarquee className="relative z-1 mt-8 border-y border-primary-300 md:mt-14" />
+
+      {isDesktop && (
+        <img
+          src="/hero-img.png"
+          alt=""
+          className="w-300 absolute -right-38 bottom-37.5"
+        />
+      )}
     </div>
   );
 }
