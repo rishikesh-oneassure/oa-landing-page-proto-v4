@@ -17,7 +17,7 @@ export default function Impact() {
         >
           &mdash; Our Impact
         </BodySmall>
-        <HeadingXLarge className={"text-neutral-1100"} weight="semibold">
+        <HeadingXLarge className={"text-neutral-1100"} weight="medium">
           Our Impact
         </HeadingXLarge>
       </div>

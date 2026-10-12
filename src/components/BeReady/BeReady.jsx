@@ -8,7 +8,7 @@ export default function BeReady() {
         &mdash; Be Ready Before You Need it
       </BodySmall>
 
-      <HeadingXLarge weight="medium">
+      <HeadingXLarge weight="regular">
         Emergencies don't wait. Neither should your cover.
       </HeadingXLarge>
 
@@ -17,7 +17,7 @@ export default function BeReady() {
         salesperson.
       </BodyLarge>
 
-      <button className="w-full md:w-1/2 bg-primary-100 text-primary-800 px-6 py-3 rounded-lg mt-6 font-semibold hover:bg-primary-200 transition-all duration-100 cursor-pointer">
+      <button className="w-full md:w-1/2 bg-neutral-50 text-primary-800 px-6 py-3 rounded-lg mt-6 font-semibold hover:bg-primary-100 transition-all duration-100 cursor-pointer">
         Book a free call
       </button>
     </SectionContainerLarge>

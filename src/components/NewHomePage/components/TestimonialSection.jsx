@@ -49,7 +49,7 @@ const TestimonialSection = ({ story }) => {
             </BodySmall>
             <HeadingXLarge
               className="flex w-full items-center justify-center gap-6 text-center text-neutral-1100"
-              weight="semibold"
+              weight="medium"
             >
               {story.title}
             </HeadingXLarge>

@@ -36,7 +36,7 @@ export default function Hero() {
           <Heading2XLarge
             as="h1"
             className="text-neutral-1100 tracking-tight text-center"
-            weight="semibold"
+            weight="medium"
           >
             Not sure what cover to buy? Talk to an expert first.
           </Heading2XLarge>
@@ -49,8 +49,8 @@ export default function Hero() {
           </HeadingSmall>
         </div>
 
-        <SectionContainerMedium className="flex w-full min-w-0 flex-col-reverse px-0! mb-0! md:flex-row">
-          <div className="mx-auto flex w-full min-w-0 max-w-full flex-col-reverse md:flex-row gap-3 md:gap-8">
+        <SectionContainerMedium className="flex min-w-0 flex-col-reverse px-0! mb-0! md:flex-row mx-auto">
+          <div className="mx-auto flex w-fit flex-col-reverse md:flex-row md:justify-center gap-3 md:gap-8">
             <div className="flex w-full md:h-full min-w-0 flex-col items-center justify-center bg-primary-800 p-6 md:p-8 text-white divide-y divide-primary-700 rounded-2xl *:w-full md:max-w-1/2">
               <BodySmall
                 className={"border-b-0 uppercase tracking-widest pb-3 md:pb-6"}
@@ -113,9 +113,9 @@ export default function Hero() {
               </div>
             </div>
 
-            <form className="z-5 flex w-full min-w-0 max-w-full flex-col bg-white px-6 md:px-8 py-4 shadow-lg md:max-w-1/2 rounded-2xl">
+            <form className="z-5 flex w-full md:w-[40%] min-w-0 max-w-full flex-col justify-between bg-white px-6 md:px-8 py-4 shadow-lg md:max-w-1/2 rounded-2xl">
               <div className="flex flex-col gap-0.5 pt-2">
-                <HeadingMedium className="text-neutral-1100">
+                <HeadingMedium className="text-neutral-1100" weight="medium">
                   Book your free call
                 </HeadingMedium>
                 <BodyMedium className="text-neutral-700">
@@ -124,38 +124,26 @@ export default function Hero() {
               </div>
 
               <p className="flex flex-col gap-0.5 w-full py-2">
-                <label>
-                  <BodyMedium className="text-neutral-900 ml-1">
-                    Name
-                  </BodyMedium>
-                </label>
                 <input
                   type="text"
-                  className="w-full min-w-0 max-w-full rounded-lg border border-neutral-300 bg-white p-2"
-                  placeholder=""
+                  className="w-full min-w-0 max-w-full rounded-lg border border-neutral-300 bg-white px-4 py-2 placeholder:text-sm md:placeholder:text-base placeholder:text-neutral-800"
+                  placeholder="Your name"
                 />
               </p>
 
               <p className="flex flex-col gap-0.5 w-full py-2">
-                <label>
-                  <BodyMedium className="text-neutral-900 ml-1">
-                    Phone Number
-                  </BodyMedium>
-                </label>
                 <input
                   type="text"
-                  className="w-full min-w-0 max-w-full rounded-lg border border-neutral-300 bg-white p-2"
-                  placeholder=""
+                  className="w-full min-w-0 max-w-full rounded-lg border border-neutral-300 bg-white px-4 py-2 placeholder:text-sm md:placeholder:text-base placeholder:text-neutral-800"
+                  placeholder="Phone number"
                 />
               </p>
 
               <p className="flex flex-col gap-0.5 w-full py-2">
-                <label value={"default"}>
-                  <BodyMedium className="text-neutral-900 ml-1">
-                    What do you need?
-                  </BodyMedium>
-                </label>
-                <select className="w-full min-w-0 max-w-full rounded-lg border-r-8 border-r-white outline outline-neutral-300 p-2 text-sm text-neutral-900">
+                <select className="w-full min-w-0 max-w-full rounded-lg border-r-8 border-r-white outline outline-neutral-300 p-2 text-sm md:text-base font-normal text-neutral-800">
+                  <option value={"What do you need?"} defaultValue={true}>
+                    What do you need
+                  </option>
                   <option value={"Policy Review"}>Policy Review</option>
                   <option value={"Personalized Recommendation"}>
                     Personalized Recommendation

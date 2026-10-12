@@ -22,7 +22,7 @@ const Founder = ({ title, desc, name, designation, company, image }) => {
         >
           &mdash; Founder's Note
         </BodySmall>
-        <HeadingXLarge className={"text-neutral-1100"} weight="semibold">
+        <HeadingXLarge className={"text-neutral-1100"} weight="medium">
           Meet Our Founder
         </HeadingXLarge>
       </div>

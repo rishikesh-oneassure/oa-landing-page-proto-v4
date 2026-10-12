@@ -26,7 +26,7 @@ export default function WhyOneAssure() {
         >
           &mdash; Why Us
         </BodySmall>
-        <HeadingXLarge className={"text-neutral-1100"} weight="semibold">
+        <HeadingXLarge className={"text-neutral-1100"} weight="medium">
           Why OneAssure
         </HeadingXLarge>
       </div>

@@ -18,7 +18,7 @@ export default function WhatToExpect() {
         >
           &mdash; We Deliver
         </BodySmall>
-        <HeadingXLarge className={"text-neutral-1100"} weight="semibold">
+        <HeadingXLarge className={"text-neutral-1100"} weight="medium">
           What to Expect
         </HeadingXLarge>
       </div>
