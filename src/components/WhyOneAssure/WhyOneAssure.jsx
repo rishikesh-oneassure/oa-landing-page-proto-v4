@@ -40,7 +40,11 @@ export default function WhyOneAssure() {
           <span className="w-10 aspect-square flex items-center justify-center rounded-full bg-primary-200 mb-2">
             <PiScales className="w-6 h-6 text-primary-800" />
           </span>
-          <HeadingSmall as="span" weight="semibold">
+          <HeadingSmall
+            as="span"
+            weight="semibold"
+            className={"text-neutral-900"}
+          >
             Independent
           </HeadingSmall>
           <BodyMedium>Plans compared across insurers</BodyMedium>
@@ -49,7 +53,11 @@ export default function WhyOneAssure() {
           <span className="w-10 aspect-square flex items-center justify-center rounded-full bg-primary-200 mb-2">
             <PiUserGear className="w-6 h-6 text-primary-800" />
           </span>
-          <HeadingSmall as="span" weight="semibold">
+          <HeadingSmall
+            as="span"
+            weight="semibold"
+            className={"text-neutral-900"}
+          >
             Personalised
           </HeadingSmall>
           <BodyMedium>Built around your family and budget</BodyMedium>
@@ -58,7 +66,11 @@ export default function WhyOneAssure() {
           <span className="w-10 aspect-square flex items-center justify-center rounded-full bg-primary-200 mb-2">
             <PiSignature className="w-6 h-6 text-primary-800" />
           </span>
-          <HeadingSmall as="span" weight="semibold">
+          <HeadingSmall
+            as="span"
+            weight="semibold"
+            className={"text-neutral-900"}
+          >
             Claims Handled With You
           </HeadingSmall>
           <BodyMedium>Filing to insurer follow-ups</BodyMedium>
@@ -67,7 +79,11 @@ export default function WhyOneAssure() {
           <span className="w-10 aspect-square flex items-center justify-center rounded-full bg-primary-200 mb-2">
             <LiaHandshake className="w-6 h-6 text-primary-800" />
           </span>
-          <HeadingSmall as="span" weight="semibold">
+          <HeadingSmall
+            as="span"
+            weight="semibold"
+            className={"text-neutral-900"}
+          >
             Support for life
           </HeadingSmall>
           <BodyMedium>Our dedicated claims team</BodyMedium>
