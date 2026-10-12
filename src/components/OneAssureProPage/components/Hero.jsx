@@ -9,10 +9,13 @@ import {
   HeadingMedium,
   HeadingSmall,
 } from "@/components/UI/Typography";
+import { useSubscribeDesktopLayout } from "@/hooks/useSubscribeDesktopLayout";
 import { HiOutlineDocumentCheck } from "react-icons/hi2";
 import { LiaHandshake, LiaUserCheckSolid } from "react-icons/lia";
 
 export default function Hero() {
+  const isDesktop = useSubscribeDesktopLayout();
+
   return (
     <div className="relative h-fit w-full -mt-24 mb-12 pt-36 md:left-1/2 md:w-screen md:-translate-x-1/2 md:-mt-31.5 md:pt-43.5 lg:-mt-31 lg:pt-43">
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
@@ -170,10 +173,10 @@ export default function Hero() {
               <div className="w-full pt-4 pb-2 md:pb-0 flex items-center justify-between">
                 <BodyMedium
                   className={
-                    "text-neutral-600 text-center leading-3 tracking-wider"
+                    "text-neutral-600 text-center leading-3.5 tracking-wider"
                   }
                 >
-                  Insurers We Work With
+                  Insurers We {!isDesktop && <br />}Work With
                 </BodyMedium>
 
                 <div className="flex items-center gap-2 md:gap-4">
