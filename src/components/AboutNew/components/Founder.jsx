@@ -37,8 +37,12 @@ const Founder = ({ title, desc, name, designation, company, image }) => {
         </div>
 
         <figure className="px-8 py-6 md:py-10 md:-translate-x-4 flex flex-col gap-3 leading-tight rounded-t-2xl md:rounded-b-2xl md:rounded-r-2xl md:rounded-l-none bg-primary-800 text-primary-50">
-          <BodyLarge>{descriptionPartOne}</BodyLarge>
-          <BodyLarge>{descriptionPartTwo}</BodyLarge>
+          <BodyLarge className={"font-extralight!"}>
+            {descriptionPartOne}
+          </BodyLarge>
+          <BodyLarge className={"font-extralight!"}>
+            {descriptionPartTwo}
+          </BodyLarge>
 
           <div className="flex flex-col self-center md:self-start">
             <HeadingXLarge as="span" className={"font-corinthia mt-4"}>

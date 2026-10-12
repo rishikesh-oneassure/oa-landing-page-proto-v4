@@ -122,7 +122,9 @@ export default function Hero() {
 
               <p className="flex flex-col gap-0.5 w-full py-2">
                 <label>
-                  <BodyLarge className="text-neutral-900 ml-1">Name</BodyLarge>
+                  <BodyMedium className="text-neutral-900 ml-1">
+                    Name
+                  </BodyMedium>
                 </label>
                 <input
                   type="text"
@@ -133,9 +135,9 @@ export default function Hero() {
 
               <p className="flex flex-col gap-0.5 w-full py-2">
                 <label>
-                  <BodyLarge className="text-neutral-900 ml-1">
+                  <BodyMedium className="text-neutral-900 ml-1">
                     Phone Number
-                  </BodyLarge>
+                  </BodyMedium>
                 </label>
                 <input
                   type="text"
@@ -146,9 +148,9 @@ export default function Hero() {
 
               <p className="flex flex-col gap-0.5 w-full py-2">
                 <label value={"default"}>
-                  <BodyLarge className="text-neutral-900 ml-1">
+                  <BodyMedium className="text-neutral-900 ml-1">
                     What do you need?
-                  </BodyLarge>
+                  </BodyMedium>
                 </label>
                 <select className="w-full min-w-0 max-w-full rounded-lg border-r-8 border-r-white outline outline-neutral-300 p-2 text-sm text-neutral-900">
                   <option value={"Policy Review"}>Policy Review</option>
