@@ -1,9 +1,11 @@
 import SectionContainer from "@/components/globals/SectionContainer";
+import SectionContainerLarge from "@/components/globals/SectionContainerLarge";
 import SectionContainerMedium from "@/components/globals/SectionContainerMedium";
 import {
   BodyLarge,
   BodyMedium,
   BodySmall,
+  HeadingLarge,
   HeadingXLarge,
 } from "@/components/UI/Typography";
 
@@ -15,11 +17,7 @@ function FounderParagraphs({ html }) {
 
   if (!text) return null;
 
-  return (
-    <BodyLarge className="text-neutral-800" weight="regular">
-      {text}
-    </BodyLarge>
-  );
+  return <BodyLarge weight="regular">{text}</BodyLarge>;
 }
 
 const Founder = ({ title, desc, name, designation, company, image }) => {
@@ -28,68 +26,44 @@ const Founder = ({ title, desc, name, designation, company, image }) => {
   const descriptionPartTwo = separatedParagraphs.slice(2);
 
   return (
-    <SectionContainer className="flex flex-col items-center gap-4 md:gap-6 md:!mb-20">
-      <div>
+    <SectionContainer className="ml-[calc(50%-50vw)]! mr-[calc(50%-50vw)]! flex w-screen! max-w-none! flex-col items-center gap-4 bg-primary-100 py-12">
+      <div className="flex flex-col items-center text-center gap-1">
         <BodySmall
-          className={
-            "uppercase text-primary-800 tracking-widest text-center mb-0.5"
-          }
+          className={"uppercase text-primary-900 tracking-widest"}
           weight="semibold"
         >
           &mdash; Founder's Note
         </BodySmall>
-        <HeadingXLarge className="block text-center">{title}</HeadingXLarge>
+        <HeadingXLarge className={"text-neutral-1100"} weight="semibold">
+          Meet Our Founder
+        </HeadingXLarge>
       </div>
-      <SectionContainerMedium className="relative !pt-11 md:!pt-16 md:!mx-auto !mb-0 rounded-5xl overflow-clip">
-        <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden rounded-5xl">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: "url(/pro-hero-background.jpg)",
-              filter: "blur(24px)",
-              transform: "scale(1.06)",
-            }}
-          />
-        </div>
-        <div className="relative z-1 md:px-20 flex flex-col gap-5 mb-5 text-center">
-          {descriptionPartOne.map((para, index) => (
-            <FounderParagraphs key={index} html={para} />
-          ))}
-        </div>
 
-        <div className="relative z-1 flex flex-col-reverse md:flex-row">
+      <div className="w-full max-w-6xl flex flex-col-reverse md:flex-row overflow-clip">
+        <div className="grid bg-primary-800 rounded-2xl px-6 pt-6 z-2">
           <img
-            src={image}
-            alt={
-              name
-                ? `Portrait of ${name}, ${designation} at OneAssure`
-                : "Porttrait of OneAssure founder"
-            }
-            height={260}
-            width={220}
-            // className="mx-auto md:pl-4 -translate-x-10 md:translate-x-0 -mt-10 md:mt-auto"
-            className=""
+            src="/about-founder.png"
+            alt=""
+            className="w-3xl h-auto self-end drop-shadow-[1.5rem_0.5rem_1rem_rgba(0,0,0,0.5)] px-4"
           />
-
-          <div className="flex flex-col gap-2">
-            {descriptionPartTwo.map((para, index) => (
-              <FounderParagraphs key={index} html={para} />
-            ))}
-
-            <div className="">
-              <HeadingXLarge className="font-corinthia text-primary-800 !leading-none self-stretch">
-                {name}
-              </HeadingXLarge>
-              <BodyMedium className="text-primary-800" weight="regular" as="p">
-                {designation} -{" "}
-                <BodyMedium as="span" weight="semibold">
-                  {company}
-                </BodyMedium>
-              </BodyMedium>
-            </div>
-          </div>
         </div>
-      </SectionContainerMedium>
+
+        <figure className="px-8 py-6 md:-translate-x-4 flex flex-col gap-3 leading-tight rounded-b-2xl md:rounded-r-2xl md:rounded-l-none bg-primary-800 text-primary-50">
+          {FounderParagraphs({ html: descriptionPartOne })}
+          {FounderParagraphs({ html: descriptionPartTwo })}
+
+          <div className="flex flex-col">
+            <HeadingXLarge as="span" className={"font-corinthia mt-4"}>
+              {name}
+            </HeadingXLarge>
+
+            <figure className="flex gap-2 -mt-1.5">
+              <BodyMedium>{designation}</BodyMedium> &mdash;{" "}
+              <BodyMedium weight="semibold">{company}</BodyMedium>
+            </figure>
+          </div>
+        </figure>
+      </div>
     </SectionContainer>
   );
 };

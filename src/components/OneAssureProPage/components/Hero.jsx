@@ -13,7 +13,7 @@ import { LiaHandshake, LiaUserCheckSolid } from "react-icons/lia";
 
 export default function Hero() {
   return (
-    <div className="relative h-fit w-full -mt-24 mb-12 pt-36 md:left-1/2 md:w-screen md:-translate-x-1/2 md:-mt-31.5 md:mb-20 md:pt-43.5 lg:-mt-31 lg:pt-43">
+    <div className="relative h-fit w-full -mt-24 mb-12 pt-36 md:left-1/2 md:w-screen md:-translate-x-1/2 md:-mt-31.5 md:pt-43.5 lg:-mt-31 lg:pt-43">
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
