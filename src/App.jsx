@@ -1,7 +1,7 @@
 import Founder from "@/components/AboutNew/components/Founder";
 import founderSection from "@/components/AboutNew/founder";
-import TestimonialsTickerSection from "@/components/globals/DesignSystemV1/TestimonialsTickerSection";
-import testimonialsSection from "@/components/globals/DesignSystemV1/testimonials";
+import TestimonialSection from "@/components/NewHomePage/components/TestimonialSection";
+import testimonialStory from "@/components/NewHomePage/testimonialStory";
 import ProLayout from "@/layouts/ProLayout";
 import Hero from "./components/OneAssureProPage/components/Hero";
 import Impact from "./components/Impact/Impact";
@@ -13,14 +13,11 @@ export default function App() {
   return (
     <ProLayout>
       <Hero />
-      <TestimonialsTickerSection
-        {...testimonialsSection}
-        className="md:!my-20"
-      />
-      <Founder {...founderSection} />
       <Impact />
       <WhyOneAssure />
       <WhatToExpect />
+      <Founder {...founderSection} />
+      <TestimonialSection story={testimonialStory} />
       <BeReady />
     </ProLayout>
   );

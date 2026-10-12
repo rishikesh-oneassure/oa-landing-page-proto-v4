@@ -57,7 +57,7 @@ const Founder = ({ title, desc, name, designation, company, image }) => {
           ))}
         </div>
 
-        <div className="relative z-1 flex flex-col-reverse md:flex-row md:pr-20 text-center md:pl-4">
+        <div className="relative z-1 flex flex-col-reverse md:flex-row">
           <img
             src={image}
             alt={
@@ -67,15 +67,16 @@ const Founder = ({ title, desc, name, designation, company, image }) => {
             }
             height={260}
             width={220}
-            className="mx-auto md:pl-4 -translate-x-10 md:translate-x-0 -mt-10 md:mt-auto"
+            // className="mx-auto md:pl-4 -translate-x-10 md:translate-x-0 -mt-10 md:mt-auto"
+            className=""
           />
 
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-2">
             {descriptionPartTwo.map((para, index) => (
               <FounderParagraphs key={index} html={para} />
             ))}
 
-            <div className="self-end md:self-stretch flex flex-col w-fit items-end md:items-start md:pl-10 translate-y-2 md:translate-y-6">
+            <div className="">
               <HeadingXLarge className="font-corinthia text-primary-800 !leading-none self-stretch">
                 {name}
               </HeadingXLarge>

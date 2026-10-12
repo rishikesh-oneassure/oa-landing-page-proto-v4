@@ -19,7 +19,7 @@ function Navbar_Pro() {
           />
         </a>
 
-        <div className="ml-4 hidden flex-1 items-center justify-center gap-8 lg:flex">
+        {/* <div className="ml-4 hidden flex-1 items-center justify-center gap-8 lg:flex">
           {navItems.map((item) => (
             <ScrollNavItem
               key={item.label}
@@ -28,13 +28,13 @@ function Navbar_Pro() {
               className="text-sm font-medium text-neutral-1100 transition-colors duration-200 hover:text-primary-800"
             />
           ))}
-        </div>
+        </div> */}
 
         <div className="ml-auto">
           <Button
             variant="default"
             type="button"
-              className="h-10 rounded-full bg-primary-800 px-3.5 text-xs font-semibold text-white hover:scale-100 sm:h-[52px] sm:px-6 sm:text-sm"
+            className="h-10 rounded-full bg-primary-800 px-3.5 text-xs font-semibold text-white hover:scale-100 sm:h-[52px] sm:px-6 sm:text-sm"
           >
             Get Clarity Now
           </Button>

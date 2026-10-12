@@ -1,5 +1,5 @@
-import InsurerLogoMarquee from "@/components/InsurerLogoMarquee";
 import SectionContainerMedium from "@/components/globals/SectionContainerMedium";
+import InsurerLogoMarquee from "@/components/InsurerLogoMarquee";
 import { Button } from "@/components/UI/Button";
 import {
   BodyLarge,
@@ -13,7 +13,7 @@ import { LiaHandshake, LiaUserCheckSolid } from "react-icons/lia";
 
 export default function Hero() {
   return (
-    <div className="relative h-fit w-full -mt-24 pt-36 md:left-1/2 md:w-screen md:-translate-x-1/2 md:-mt-31.5 md:pt-43.5 lg:-mt-31 lg:pt-43">
+    <div className="relative h-fit w-full -mt-24 mb-12 pt-36 md:left-1/2 md:w-screen md:-translate-x-1/2 md:-mt-31.5 md:mb-20 md:pt-43.5 lg:-mt-31 lg:pt-43">
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -43,22 +43,20 @@ export default function Hero() {
         </div>
 
         <SectionContainerMedium className="flex w-full min-w-0 flex-col-reverse px-0! mb-0! md:flex-row">
-          <div className="mx-auto flex w-full min-w-0 max-w-full flex-col-reverse md:flex-row">
-            <div className="flex w-full min-w-0 flex-col items-center justify-center bg-primary-800 px-6 py-3 text-white divide-y divide-primary-700 rounded-b-2xl *:w-full md:max-w-1/2 md:translate-x-4 md:rounded-l-2xl md:rounded-br-none md:pr-12">
-              <HeadingSmall className={"border-b-0"} weight="semibold">
-                You can avail
-              </HeadingSmall>
-              <div className="flex items-start gap-2 py-3">
-                <span className="flex items-center justify-center h-8 aspect-square rounded-full mt-1">
+          <div className="mx-auto flex w-full min-w-0 max-w-full flex-col-reverse md:flex-row gap-3 md:gap-8">
+            <div className="flex w-full min-w-0 flex-col items-center justify-center bg-primary-800 px-6 py-3 text-white divide-y divide-primary-700 rounded-2xl *:w-full md:max-w-1/2">
+              <BodySmall
+                className={"border-b-0 uppercase tracking-widest"}
+                weight="semibold"
+              >
+                &mdash; You can avail
+              </BodySmall>
+              <div className="flex items-start gap-1 py-3">
+                <span className="flex items-center justify-center h-8 -mt-1 aspect-square rounded-full">
                   <HiOutlineDocumentCheck className="h-6 w-6 aspect-square text-primary-300" />
                 </span>
                 <div className="flex min-w-0 flex-col gap-1.5">
-                  <BodySmall
-                    className="uppercase tracking-widest"
-                    weight="semibold"
-                  >
-                    &mdash; Free Policy Review
-                  </BodySmall>
+                  <BodyMedium weight="semibold">Free Policy Review</BodyMedium>
                   <BodyMedium classname="text-white">
                     Already have a policy? We walk you through what it really
                     covers, flag the gaps and exclusions, and tell you honestly
@@ -67,17 +65,14 @@ export default function Hero() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-2 py-3">
-                <span className="flex items-center justify-center h-8 aspect-square rounded-full mt-1">
+              <div className="flex items-start gap-1 py-3">
+                <span className="flex items-center justify-center h-8 -mt-1 aspect-square rounded-full">
                   <LiaUserCheckSolid className="h-6 w-6 aspect-square text-primary-300" />
                 </span>
                 <div className="flex min-w-0 flex-col gap-1.5">
-                  <BodySmall
-                    className="uppercase tracking-widest"
-                    weight="semibold"
-                  >
-                    &mdash; Personalised Recommendation
-                  </BodySmall>
+                  <BodyMedium weight="semibold">
+                    Personalised Recommendation
+                  </BodyMedium>
                   <BodyMedium classname="text-white">
                     Plans matched to your family, health and budget, with a
                     clear reason behind every pick.
@@ -85,17 +80,14 @@ export default function Hero() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-2 py-3">
-                <span className="flex items-center justify-center h-8 aspect-square rounded-full mt-1">
+              <div className="flex items-start gap-1 py-3">
+                <span className="flex items-center justify-center h-8 -mt-1 aspect-square rounded-full">
                   <LiaHandshake className="h-6 w-6 aspect-square text-primary-300" />
                 </span>
                 <div className="flex min-w-0 flex-col gap-1.5">
-                  <BodySmall
-                    className="uppercase tracking-widest"
-                    weight="semibold"
-                  >
-                    &mdash; Lifetime Dedicated Claims Support
-                  </BodySmall>
+                  <BodyMedium weight="semibold">
+                    Lifetime Dedicated Claims Support
+                  </BodyMedium>
                   <BodyMedium classname="text-white">
                     Our dedicated claims team stays with you for as long as you
                     hold the policy, from filing to insurer follow-ups and
@@ -105,7 +97,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <form className="z-5 flex w-full min-w-0 max-w-full flex-col rounded-t-2xl bg-white px-6 py-2 shadow-lg md:max-w-1/2 md:rounded-2xl">
+            <form className="z-5 flex w-full min-w-0 max-w-full flex-col bg-white px-6 py-2 shadow-lg md:max-w-1/2 rounded-2xl">
               <div className="flex flex-col gap-0.5 py-2">
                 <HeadingSmall className="text-neutral-1100">
                   Book your free call
@@ -156,6 +148,44 @@ export default function Hero() {
               </p>
 
               <Button className="rounded-lg my-2">Continue</Button>
+
+              <BodySmall
+                className={
+                  "block w-full pb-2 border-b border-neutral-200 text-neutral-600 text-center"
+                }
+              >
+                A OneAssure Expert Will Assist You
+              </BodySmall>
+
+              <div className="w-full pt-4 pb-2 flex items-center justify-between">
+                <BodySmall className={"text-neutral-600 text-center leading-3"}>
+                  We Work With
+                </BodySmall>
+
+                <span className="h-8 md:h-10 w-auto">
+                  <img
+                    src="/insurer-logos/21-logo-care-health-insurance-2c0265102e.svg"
+                    alt="HDFC ERGO Logo"
+                    className="object-contain h-10"
+                  />
+                </span>
+
+                <span className="h-8 md:h-10 w-auto">
+                  <img
+                    src="/insurer-logos/08-thumbnail-niva-health-insurance-logo-a32bd384cc.png"
+                    alt="HDFC ERGO Logo"
+                    className="object-contain h-10"
+                  />
+                </span>
+
+                <span className="h-8 md:h-10 w-auto">
+                  <img
+                    src="/insurer-logos/01-logo-hdfc-22e6758170.png"
+                    alt="HDFC ERGO Logo"
+                    className="object-contain h-10"
+                  />
+                </span>
+              </div>
             </form>
           </div>
         </SectionContainerMedium>

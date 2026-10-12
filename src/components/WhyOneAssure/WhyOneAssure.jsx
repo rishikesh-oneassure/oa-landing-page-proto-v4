@@ -1,4 +1,9 @@
-import { PiScales } from "react-icons/pi";
+import {
+  PiScales,
+  PiSignature,
+  PiUserGear,
+  PiUserGearThin,
+} from "react-icons/pi";
 import SectionContainerLarge from "../globals/SectionContainerLarge";
 import {
   BodyLarge,
@@ -7,6 +12,7 @@ import {
   HeadingSmall,
   HeadingXLarge,
 } from "../UI/Typography";
+import { LiaHandshake } from "react-icons/lia";
 
 // Because we don't just sell insurance. We walk with you, every step of the way.
 
@@ -41,7 +47,7 @@ export default function WhyOneAssure() {
         </div>
         <div className="col-span-1 flex flex-col items-center p-4 rounded-2xl border border-primary-300 shadow-lg">
           <span className="w-10 aspect-square flex items-center justify-center rounded-full bg-primary-200 mb-2">
-            <PiScales className="w-6 h-6 text-primary-800" />
+            <PiUserGear className="w-6 h-6 text-primary-800" />
           </span>
           <HeadingSmall as="span" weight="semibold">
             Personalised
@@ -50,7 +56,7 @@ export default function WhyOneAssure() {
         </div>
         <div className="col-span-1 flex flex-col items-center p-4 rounded-2xl border border-primary-300 shadow-lg">
           <span className="w-10 aspect-square flex items-center justify-center rounded-full bg-primary-200 mb-2">
-            <PiScales className="w-6 h-6 text-primary-800" />
+            <PiSignature className="w-6 h-6 text-primary-800" />
           </span>
           <HeadingSmall as="span" weight="semibold">
             Claims Handled With You
@@ -59,7 +65,7 @@ export default function WhyOneAssure() {
         </div>
         <div className="col-span-1 flex flex-col items-center p-4 rounded-2xl border border-primary-300 shadow-lg">
           <span className="w-10 aspect-square flex items-center justify-center rounded-full bg-primary-200 mb-2">
-            <PiScales className="w-6 h-6 text-primary-800" />
+            <LiaHandshake className="w-6 h-6 text-primary-800" />
           </span>
           <HeadingSmall as="span" weight="semibold">
             Support for life
