@@ -1,3 +1,4 @@
+import SectionContainerLarge from "@/components/globals/SectionContainerLarge";
 import SectionContainerMedium from "@/components/globals/SectionContainerMedium";
 import SectionContainerSmall from "@/components/globals/SectionContainerSmall";
 import { BodySmall, HeadingXLarge } from "@/components/UI/Typography";
@@ -38,7 +39,7 @@ const TestimonialSection = ({ story }) => {
   }, [currentIndex]);
 
   return (
-    <div className="ml-[calc(50%-50vw)]! mr-[calc(50%-50vw)]! py-12 md:py-20 w-screen bg-[linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url('/family-bg-img.jpg')] bg-cover bg-top mb-0 md:mb-20">
+    <div className="ml-[calc(50%-50vw)]! mr-[calc(50%-50vw)]! py-12 md:py-32 w-screen bg-[linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url('/family-bg-img.jpg')] bg-cover bg-top mb-0">
       <div className="mb-0 w-full overflow-hidden md:mb-0">
         <SectionContainerMedium className="flex flex-col !mb-0 !px-0">
           <div className="flex flex-col items-center text-center">
@@ -56,7 +57,7 @@ const TestimonialSection = ({ story }) => {
             </HeadingXLarge>
           </div>
 
-          <SectionContainerSmall className="overflow-hidden !mb-0 !px-0">
+          <SectionContainerLarge className="overflow-hidden !mb-0 !px-0">
             <div
               className="relative"
               style={{ height: SLOT_HEIGHT * storyPoints.length }}
@@ -93,7 +94,7 @@ const TestimonialSection = ({ story }) => {
                 );
               })}
             </div>
-          </SectionContainerSmall>
+          </SectionContainerLarge>
         </SectionContainerMedium>
       </div>
     </div>

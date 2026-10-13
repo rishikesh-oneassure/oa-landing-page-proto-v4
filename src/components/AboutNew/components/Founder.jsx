@@ -14,7 +14,7 @@ const Founder = ({ title, desc, name, designation, company, image }) => {
   const descriptionPartTwo = desc.slice(2);
 
   return (
-    <SectionContainer className="ml-[calc(50%-50vw)]! mr-[calc(50%-50vw)]! mb-0! flex w-screen! max-w-none! flex-col items-center gap-4 bg-primary-100 py-12">
+    <SectionContainer className="ml-[calc(50%-50vw)]! mr-[calc(50%-50vw)]! mb-0! flex w-screen! max-w-none! flex-col items-center gap-4 bg-primary-100 py-12 md:py-20">
       <div className="flex flex-col items-center text-center gap-1">
         <BodySmall
           className={"uppercase text-primary-900 tracking-widest"}
