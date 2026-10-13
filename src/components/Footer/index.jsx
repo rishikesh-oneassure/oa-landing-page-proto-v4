@@ -9,7 +9,7 @@ const Footer = () => {
       <FooterTopSection />
       {/* <CalculatorSection /> */}
       {/* <FooterTabs /> */}
-      <FooterAbout />
+      {/* <FooterAbout /> */}
     </footer>
   );
 };

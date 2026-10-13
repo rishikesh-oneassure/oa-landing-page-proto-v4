@@ -10,6 +10,7 @@ import {
   footerNav,
 } from "@/components/Footer/footer.config";
 import SectionContainer from "@/components/globals/SectionContainer";
+import FooterAbout from "./FooterBottom";
 
 const ContactUs = ({ className }) => {
   return (
@@ -58,7 +59,7 @@ const FooterTopSection = ({ utm }) => {
 
   return (
     <SectionContainer className="!px-0 !mb-6 md:!mb-10">
-      <div className="w-full flex md:justify-between">
+      <div className="w-full flex md:justify-between gap-6 md:gap-20 items-center">
         <div className="w-min flex flex-col gap-2 items-center md:items-start text-center md:text-left">
           <div className="flex flex-col items-center md:items-start">
             <span className="w-48">
@@ -69,7 +70,7 @@ const FooterTopSection = ({ utm }) => {
             </BodyMedium>
           </div>
 
-          <div className="flex gap-4 h-16">
+          <div className="flex gap-4 h-16 mt-4">
             {footerBrand.badges.map((badge) => (
               <img
                 key={badge.alt}
@@ -79,6 +80,18 @@ const FooterTopSection = ({ utm }) => {
               />
             ))}
           </div>
+        </div>
+
+        <FooterAbout />
+
+        <div className="grid grid-cols-2 gap-4">
+          {policyGroup.links.map((link) => (
+            <CustomLink key={link.label} href={link.href} utm={utm}>
+              <BodySmall as="p" weight="regular" className="text-neutral-1100">
+                {link.label}
+              </BodySmall>
+            </CustomLink>
+          ))}
         </div>
       </div>
     </SectionContainer>

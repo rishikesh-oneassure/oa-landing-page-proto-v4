@@ -7,18 +7,21 @@ import { BiSolidQuoteRight } from "react-icons/bi";
 
 const SLOT_HEIGHT = 78;
 
+const PILL_TYPE = "text-[0.625rem]/[0.875rem] md:text-[1rem]/[1.5rem]";
+
 function positionStyles(position) {
-  const base = "transition-all duration-1000 ease-in-out";
+  const base =
+    "transition-[opacity,transform,color,background-color] duration-1000 ease-in-out";
 
   switch (position) {
     case 1:
-      return `${base} scale-[0.97] text-primary-50 font-medium opacity-60 text-[0.625rem]/[0.875rem] md:text-[0.875rem]/[1.25rem]`;
+      return `${base} scale-[0.97] text-primary-50 font-medium opacity-60 ${PILL_TYPE}`;
     case 2:
-      return `${base} flex items-center gap-4 scale-100 bg-secondary-400 font-medium text-white opacity-100 text-[0.625rem]/[0.875rem] md:text-[1rem]/[1.5rem]`;
+      return `${base} scale-100 bg-secondary-400 font-medium text-white opacity-100 ${PILL_TYPE}`;
     case 3:
-      return `${base} scale-[0.97] text-primary-50 font-medium opacity-60 text-[0.625rem]/[0.875rem] md:text-[0.875rem]/[1.25rem]`;
+      return `${base} scale-[0.97] text-primary-50 font-medium opacity-60 ${PILL_TYPE}`;
     default:
-      return `${base} opacity-0`;
+      return `${base} opacity-0 ${PILL_TYPE}`;
   }
 }
 
@@ -74,21 +77,28 @@ const TestimonialSection = ({ story }) => {
                 return (
                   <div
                     key={index}
-                    className={`absolute right-0 left-0 flex items-center justify-center ${wrapped ? "" : "transition-all duration-1000 ease-in-out"}`}
+                    className={`absolute right-0 left-0 flex items-center justify-center ${wrapped ? "" : "transition-transform duration-1000 ease-in-out"}`}
                     style={{
                       height: SLOT_HEIGHT,
                       transform: `translateY(${relativePosition * SLOT_HEIGHT}px)`,
                     }}
                   >
                     <div
-                      className={`${positionStyles(position)} w-full md:rounded-full px-4 text-center ${position === 2 ? "py-4" : ""}`}
+                      className={`${positionStyles(position)} flex w-full items-center gap-3 rounded-full px-4 py-3 text-center md:gap-4 md:px-6`}
                     >
-                      {position === 2 && (
-                        <span className="w-20 md:w-16 aspect-square rounded-full bg-white/70 flex items-center justify-center">
-                          <BiSolidQuoteRight className="w-6 h-6 text-secondary-400" />
-                        </span>
-                      )}
-                      {point}
+                      <span
+                        className={`flex aspect-square w-8 shrink-0 items-center justify-center rounded-full bg-white/70 transition-opacity duration-1000 md:w-12 ${
+                          position === 2 ? "opacity-100" : "opacity-0"
+                        }`}
+                        aria-hidden={position !== 2}
+                      >
+                        <BiSolidQuoteRight className="h-4 w-4 text-secondary-400 md:h-5 md:w-5" />
+                      </span>
+                      <span className="min-w-0 flex-1">{point}</span>
+                      <span
+                        className="aspect-square w-8 shrink-0 md:w-12"
+                        aria-hidden
+                      />
                     </div>
                   </div>
                 );
